@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
 import Link from "next/link";
+import { motion } from 'motion/react'
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -19,31 +20,55 @@ export default function Home() {
       style={{ background: `url(/background.svg) no-repeat` }}
     >
       <div className="lg:px-[9rem] fixed z-10 flex items-center font-bold">
-        <Image src={'/ai-bg.png'} alt="logo" width={100} height={100} />
-        {/* <p className="text-4xl ">Plan</p> */}
+        <Image src={'/plan2.png'} alt="logo" width={100} height={100} />
       </div>
 
       <section className="w-full h-screen overflow-y-scroll overflow-x-hidden">
         <section className="lg:w-[90rem] p-4 mx-auto h-screen flex items-center">
           <div className="space-y-6 md:mt-32">
-            <h1 className="text-5xl font-bold">Your Gateway to the Future of Crypto</h1>
-            <p className="md:w-[50rem] leading-9">Designed to deliver long-term value and security, Plan is the ideal choice for individuals and businesses seeking to thrive in the evolving world of decentralized finance.</p>
-            <button className="border-2 border-blue-500 hover:border-yellow-500 p-2 px-4 rounded-md font-bold">Get Started</button>
+            <motion.h1 className="text-5xl font-bold" 
+            initial={{y: -200}}
+            whileInView={{y: 0}}
+            transition={{duration: 1.5}}
+            viewport={{once: true}}
+            >Your Gateway to the Future of Crypto
+            </motion.h1>
+            <motion.p className="md:w-[50rem] leading-9"
+            initial={{y: 200}}
+            whileInView={{y: 0}}
+            transition={{duration: 1.5}}
+            viewport={{once: true}}
+            >
+              Designed to deliver long-term value and security, Plan is the ideal choice for individuals and businesses seeking to thrive in the evolving world of decentralized finance.
+            </motion.p>
+            <motion.button className="border-2 border-blue-500 hover:border-yellow-500 p-2 px-4 rounded-md font-bold"
+            initial={{scale: 0}}
+            whileInView={{scale: 1}}
+            transition={{duration: 1.5}}
+            viewport={{once: true}}
+            >
+              Get Started
+            </motion.button>
           </div>
         </section>
 
         <section className="lg:px-44 backdrop-blur-sm bg-blue-500 bg-opacity-10 mx-auto p-4 py-8 flex justify-center">
           <div className="space-y-24 lg:w-[90rem] p-4">
             <div className="  space-y-6 grid md:grid-cols-2 gap-4 items-center">
-              <div className="space-y-4">
+              <motion.div className="space-y-4"
+              initial={{x: -300}}
+              whileInView={{x: 0}}
+              transition={{duration: 1.5}}
+              viewport={{once: true}}
+              >
                 <h3 className="text-2xl lg:text-5xl font-bold">About Plan</h3>
                 <p className="text-justify leading-8">
                   Plan is a next-generation cryptocurrency token designed to redefine how individuals and businesses approach decentralized finance. Built on the foundation of cutting-edge blockchain technology, Plan offers a secure, transparent, and accessible investment solution tailored to the needs of modern investors.
                   Our token represents a perfect balance of innovation, sustainability, and growth potential. Plan ensures long-term value by implementing robust tokenomics and leveraging blockchain&apos;s inherent transparency and efficiency. With a focus on creating an inclusive financial ecosystem.
                 </p>
-              </div>
-              <div className="order-first md:order-last ">
-                <Image src={'/ai-bg.png'} alt="about plan" width={300} height={300} className="w-[1000px]" />
+              </motion.div>
+              <div className="order-first md:order-last w-full flex justify-end">
+                <Image src={'/plan3.png'} alt="about plan" width={300} height={300} className="w-[500px] flex" />
               </div>
             </div>
 
@@ -51,14 +76,19 @@ export default function Home() {
               <div className="">
                 <Image src={'/ai-bg.png'} alt="our mission" width={300} height={300} className="w-[1000px]" />
               </div>
-              <div className=" space-y-4">
+              <motion.div className=" space-y-4"
+              initial={{x: 300}}
+              whileInView={{x: 0}}
+              transition={{duration: 1.5}}
+              viewport={{once: true}}
+              >
                 <h3 className="text-2xl lg:text-5xl font-bold">Our Mission</h3>
                 <p className="text-justify leading-8">
                   We aim to empower individuals and businesses worldwide by providing a reliable and accessible investment platform built on transparency, security, and the transformative potential of blockchain technology.
                   To empower individuals globally by providing a reliable and accessible platform for wealth creation through cryptocurrency investments.
                   to bridge the gap between traditional and decentralized finance, offering a token that not only delivers significant value but also inspires confidence and drives economic inclusion.
                 </p>
-              </div>
+              </motion.div>
             </div>
           </div>
         </section>
@@ -76,7 +106,7 @@ export default function Home() {
           <div className="space-y-24 lg:w-[90rem]">
             <div className="space-y-4 md:flex">
             <div className="w-2/12">
-              <Image src={'/ai-bg.png'} alt="about plan" width={300} height={300} className="w-[1000px]" />
+              <Image src={'/plan2.png'} alt="about plan" width={300} height={300} className="w-[1000px]" />
             </div>
 
               <div className="flex justify-between space-x-16 w-8/12">
