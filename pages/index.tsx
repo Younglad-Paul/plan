@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { Geist, Geist_Mono } from "next/font/google";
+import Link from "next/link";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -14,101 +15,117 @@ const geistMono = Geist_Mono({
 export default function Home() {
   return (
     <div
-      className={`${geistSans.variable} ${geistMono.variable} grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20 font-[family-name:var(--font-geist-sans)]`}
+      className={`${geistSans.variable} ${geistMono.variable} w-full h-screen fixed overflow-hidden text-sm lg:text-lg`}
+      style={{ background: `url(/background.svg) no-repeat` }}
     >
-      <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="list-inside list-decimal text-sm text-center sm:text-left font-[family-name:var(--font-geist-mono)]">
-          <li className="mb-2">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] px-1 py-0.5 rounded font-semibold">
-              pages/index.tsx
-            </code>
-            .
-          </li>
-          <li>Save and see your changes instantly.</li>
-        </ol>
+      <div className="lg:px-[9rem] fixed z-10 flex items-center font-bold">
+        <Image src={'/ai-bg.png'} alt="logo" width={100} height={100} />
+        {/* <p className="text-4xl ">Plan</p> */}
+      </div>
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:min-w-44"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-6 flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=default-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
+      <section className="w-full h-screen overflow-y-scroll overflow-x-hidden">
+        <section className="lg:w-[90rem] p-4 mx-auto h-screen flex items-center">
+          <div className="space-y-6 md:mt-32">
+            <h1 className="text-5xl font-bold">Your Gateway to the Future of Crypto</h1>
+            <p className="md:w-[50rem] leading-9">Designed to deliver long-term value and security, Plan is the ideal choice for individuals and businesses seeking to thrive in the evolving world of decentralized finance.</p>
+            <button className="border-2 border-blue-500 hover:border-yellow-500 p-2 px-4 rounded-md font-bold">Get Started</button>
+          </div>
+        </section>
+
+        <section className="lg:px-44 backdrop-blur-sm bg-blue-500 bg-opacity-10 mx-auto p-4 py-8 flex justify-center">
+          <div className="space-y-24 lg:w-[90rem] p-4">
+            <div className="  space-y-6 grid md:grid-cols-2 gap-4 items-center">
+              <div className="space-y-4">
+                <h3 className="text-2xl lg:text-5xl font-bold">About Plan</h3>
+                <p className="text-justify leading-8">
+                  Plan is a next-generation cryptocurrency token designed to redefine how individuals and businesses approach decentralized finance. Built on the foundation of cutting-edge blockchain technology, Plan offers a secure, transparent, and accessible investment solution tailored to the needs of modern investors.
+                  Our token represents a perfect balance of innovation, sustainability, and growth potential. Plan ensures long-term value by implementing robust tokenomics and leveraging blockchain&apos;s inherent transparency and efficiency. With a focus on creating an inclusive financial ecosystem.
+                </p>
+              </div>
+              <div className="order-first md:order-last ">
+                <Image src={'/ai-bg.png'} alt="about plan" width={300} height={300} className="w-[1000px]" />
+              </div>
+            </div>
+
+            <div className=" space-y-6 grid md:grid-cols-2 flex gap-4 items-center">
+              <div className="">
+                <Image src={'/ai-bg.png'} alt="our mission" width={300} height={300} className="w-[1000px]" />
+              </div>
+              <div className=" space-y-4">
+                <h3 className="text-2xl lg:text-5xl font-bold">Our Mission</h3>
+                <p className="text-justify leading-8">
+                  We aim to empower individuals and businesses worldwide by providing a reliable and accessible investment platform built on transparency, security, and the transformative potential of blockchain technology.
+                  To empower individuals globally by providing a reliable and accessible platform for wealth creation through cryptocurrency investments.
+                  to bridge the gap between traditional and decentralized finance, offering a token that not only delivers significant value but also inspires confidence and drives economic inclusion.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="lg:px-44 mx-auto h-screen flex items-center justify-center">
+          <div className="space-y-6 border-2 border-blue-900 bg-blue-900 text-white md:rounded-lg p-4 py-8 md:p-24 md:text-center">
+            <h3 className="text-2xl lg:text-5xl font-bold">Empower Your Financial Future with Plan</h3>
+            <p className="lg:text-2xl leading-9">a comprehensive gateway to decentralized finance, meticulously designed to deliver security, transparency, and long-term value. Built on a foundation of cutting-edge blockchain technology, Plan offers an innovative investment opportunity for those ready to embrace the future of finance.</p>
+            <p className="lg:text-2xl leading-9">Plan provides the tools and stability you need to succeed. Our commitment to sustainable growth, coupled with a community-focused approach, ensures that every investor becomes a part of a larger movement toward financial empowerment.</p>
+            <p className="lg:text-2xl leading-9">Take control of your financial journey with Plan—a token you can trust to lead you into a prosperous and decentralized future.</p>
+          </div>
+        </section>
+
+        <footer className="lg:px-44 bg-blue-900 mx-auto p-4 py-8 flex flex-col justify-center text-white">
+          <div className="space-y-24 lg:w-[90rem]">
+            <div className="space-y-4 md:flex">
+            <div className="w-2/12">
+              <Image src={'/ai-bg.png'} alt="about plan" width={300} height={300} className="w-[1000px]" />
+            </div>
+
+              <div className="flex justify-between space-x-16 w-8/12">
+                <div>
+                  <h4 className="font-semibold text-lg">Quick Links</h4>
+                  <ul className="space-y-2">
+                    <li><Link href="/" className="hover:text-blue-300">Home</Link></li>
+                    <li><Link href="/about" className="hover:text-blue-300">About Plan</Link></li>
+                    <li><Link href="/tokenomics" className="hover:text-blue-300">Tokenomics</Link></li>
+                    <li><Link href="/faq" className="hover:text-blue-300">FAQs</Link></li>
+                    <li><Link href="/contact" className="hover:text-blue-300">Contact Us</Link></li>
+                  </ul>
+                </div>
+
+                {/* Resources Section */}
+                <div>
+                  <h4 className="font-semibold text-lg">Resources</h4>
+                  <ul className="space-y-2">
+                    <li><a href="/whitepaper" className="hover:text-blue-300">Whitepaper</a></li>
+                    <li><a href="/blog" className="hover:text-blue-300">Blog</a></li>
+                    <li><a href="/investor-resources" className="hover:text-blue-300">Investor Resources</a></li>
+                    <li><a href="/privacy-policy" className="hover:text-blue-300">Privacy Policy</a></li>
+                    <li><a href="/terms-of-service" className="hover:text-blue-300">Terms of Service</a></li>
+                  </ul>
+                </div>
+
+                {/* Social Media & Subscription Section */}
+                <div>
+                  <h4 className="font-semibold text-lg">Connect With Us</h4>
+                  <ul className="space-y-2">
+                    <li><a href="https://twitter.com/PlanCrypto" className="hover:text-blue-300">Twitter</a></li>
+                    <li><a href="https://linkedin.com/company/PlanCrypto" className="hover:text-blue-300">LinkedIn</a></li>
+                    <li><a href="https://t.me/PlanCrypto" className="hover:text-blue-300">Telegram</a></li>
+                    <li><a href="https://discord.com/invite/PlanCrypto" className="hover:text-blue-300">Discord</a></li>
+                    <li><a href="https://youtube.com/PlanCrypto" className="hover:text-blue-300">YouTube</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div className="mt-8 text-center text-sm border-t border-white py-4">
+            <p>© [Year] Plan Crypto. All Rights Reserved.</p>
+            <p className="mt-2">Cryptocurrency investments carry risk. Please ensure you understand the risks involved before investing.</p>
+          </div>
+        </footer>
+
+
+      </section>
     </div>
   );
 }
